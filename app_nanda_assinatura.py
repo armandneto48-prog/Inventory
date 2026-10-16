@@ -14,7 +14,7 @@ st.set_page_config(
     page_title="Engomadoria - Controlo Estrito", layout="wide", page_icon="🧺"
 )
 
-st.title("🧺 Engomadoria da Zeza — Controlo por Validade e Packs Contínuos")
+st.title("🧺 Engomadoria da Zeza") # CENTRALIZAR
 
 if "db_clientes_v4" not in st.session_state:
   st.session_state.db_clientes_v4 = []
@@ -25,8 +25,10 @@ aba_reg, aba_cons, aba_antigo = st.tabs([
     "📜 Histórico Antigo (> 1 Ano)",
 ])
 
+# INCREMENTAR CSS NESTA APLICAÇÃO
+
 with aba_reg:
-  st.subheader("Registar Cliente e Assinatura Digital")
+  st.subheader("Registar Cliente")  # PÔR BOTÃO VERDE
   n_cli = st.text_input("Nome do Cliente (Chave de Identificação)")
   t_cli = st.text_input("Telefone do Cliente")
 
