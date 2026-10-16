@@ -102,7 +102,7 @@ with aba_reg:
   )
 
   st.markdown("---")
-  st.subheader("✍️ Assinatura Digital do Cliente (Com Caneta / Dedo no Tablet)")
+  st.subheader("✍️ Assinatura Digital")
   if HAS_CANVAS:
     st.info(
         "Use a caneta digital ou o dedo para assinar no espaço abaixo:"
@@ -145,8 +145,10 @@ with aba_reg:
     else:
       st.error("Indique o nome do cliente.")
 
+# CRIAR TABELA DE MANIPULAÇÃO DE HISTÓRICO DE PEDIDOS
+
 with aba_cons:
-  st.subheader("Histórico Completo Consolidado")
+  st.subheader("Histórico")
   if st.session_state.db_clientes_v4:
     st.dataframe(
         pd.DataFrame(st.session_state.db_clientes_v4), use_container_width=True
@@ -155,5 +157,5 @@ with aba_cons:
     st.info("Nenhum dado ativo no histórico.")
 
 with aba_antigo:
-  st.subheader("📜 Histórico de Longa Data (> 1 Ano)")
+  st.subheader("📜 Filtrar pedidos por período")
   st.info("Arquivo de pedidos passados.")
