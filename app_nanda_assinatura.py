@@ -127,7 +127,7 @@ with aba_reg:
         "Assinatura (Nome/Confirmação)", placeholder="Escreva o nome do cliente"
     )
 
-  if st.button("💾 Gravar com Assinatura no Histórico", type="primary"):
+  if st.button("💾 Gravar ", type="primary"):
     if n_cli:
       st.session_state.db_clientes_v4.append({
           "Cliente": n_cli,
